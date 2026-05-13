@@ -1,0 +1,577 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 468d7816-e529-484c-9519-848e8fd6082a
+      author: laura,maria,daniel,kevin
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for price table
+      changes:
+        - sqlFile:
+            path: 001_price.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/001_price.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: a1b2c3d4-e5f6-7890-abcd-ef1234567801
+      author: laura,maria,daniel,kevin
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for legal_information table
+      changes:
+        - sqlFile:
+            path: 002_legal_information.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/002_legal_information.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: b2c3d4e5-f6a7-8901-bcde-f12345678902
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for employee table
+      changes:
+        - sqlFile:
+            path: 003_employee.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/003_employee.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: c3d4e5f6-a7b8-9012-cdef-123456789003
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for branch table
+      changes:
+        - sqlFile:
+            path: 004_branch.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/004_branch.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: d4e5f6a7-b8c9-0123-defa-234567890004
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for room table
+      changes:
+        - sqlFile:
+            path: 005_room.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/005_room.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: e5f6a7b8-c9d0-1234-efab-345678900005
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for room_catalog table
+      changes:
+        - sqlFile:
+            path: 006_room_catalog.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/006_room_catalog.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: f6a7b8c9-d0e1-2345-fabc-456789000006
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for room_availability table
+      changes:
+        - sqlFile:
+            path: 007_room_availability.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/007_room_availability.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: a7b8c9d0-e1f2-3456-abcd-567890000007
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for room_reservation table
+      changes:
+        - sqlFile:
+            path: 008_room_reservation.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/008_room_reservation.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: b8c9d0e1-f2a3-4567-bcde-678900000008
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for room_cancellation table
+      changes:
+        - sqlFile:
+            path: 009_room_cancellation.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/009_room_cancellation.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: c9d0e1f2-a3b4-5678-cdef-789000000009
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for check_in table
+      changes:
+        - sqlFile:
+            path: 010_check_in.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/010_check_in.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: d0e1f2a3-b4c5-6789-defa-890000000010
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for check_out table
+      changes:
+        - sqlFile:
+            path: 011_check_out.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/011_check_out.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: e1f2a3b4-c5d6-7890-efab-900000000011
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for stay table
+      changes:
+        - sqlFile:
+            path: 012_stay.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/012_stay.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: f2a3b4c5-d6e7-8901-fabc-000000000012
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for product_sale table
+      changes:
+        - sqlFile:
+            path: 013_product_sale.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/013_product_sale.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: a3b4c5d6-e7f8-9012-abcd-000000000013
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for service_sale table
+      changes:
+        - sqlFile:
+            path: 014_service_sale.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/014_service_sale.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: b4c5d6e7-f8a9-0123-bcde-000000000014
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for pre_invoice table
+      changes:
+        - sqlFile:
+            path: 015_pre_invoice.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/015_pre_invoice.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: c5d6e7f8-a9b0-1234-cdef-000000000015
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for partial_payment table
+      changes:
+        - sqlFile:
+            path: 016_partial_payment.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/016_partial_payment.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: d6e7f8a9-b0c1-2345-defa-000000000016
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for invoice table
+      changes:
+        - sqlFile:
+            path: 017_invoice.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/017_invoice.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: e7f8a9b0-c1d2-3456-efab-000000000017
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for purchase_detail table
+      changes:
+        - sqlFile:
+            path: 018_purchase_detail.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/018_purchase_detail.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: f8a9b0c1-d2e3-4567-fabc-000000000018
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for product table
+      changes:
+        - sqlFile:
+            path: 019_product.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/019_product.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: a9b0c1d2-e3f4-5678-abcd-000000000019
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for product_tracking table
+      changes:
+        - sqlFile:
+            path: 020_product_tracking.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/020_product_tracking.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: b0c1d2e3-f4a5-6789-bcde-000000000020
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for inventory_availability table
+      changes:
+        - sqlFile:
+            path: 021_inventory_availability.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/021_inventory_availability.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: c1d2e3f4-a5b6-7890-cdef-000000000021
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for room_maintenance table
+      changes:
+        - sqlFile:
+            path: 022_room_maintenance.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/022_room_maintenance.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: d2e3f4a5-b6c7-8901-defa-000000000022
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for maintenance_usage table
+      changes:
+        - sqlFile:
+            path: 023_maintenance_usage.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/023_maintenance_usage.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: e3f4a5b6-c7d8-9012-efab-000000000023
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for maintenance_remodeling table
+      changes:
+        - sqlFile:
+            path: 024_maintenance_remodeling.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/024_maintenance_remodeling.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: f4a5b6c7-d8e9-0123-fabc-000000000024
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for maintenance_dashboard table
+      changes:
+        - sqlFile:
+            path: 025_maintenance_dashboard.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/025_maintenance_dashboard.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: a5b6c7d8-e9f0-1234-abcd-000000000025
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for alert table
+      changes:
+        - sqlFile:
+            path: 026_alert.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/026_alert.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: b6c7d8e9-f0a1-2345-bcde-000000000026
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for customer_loyalty table
+      changes:
+        - sqlFile:
+            path: 027_customer_loyalty.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/027_customer_loyalty.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: c7d8e9f0-a1b2-3456-cdef-000000000027
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for app_user table
+      changes:
+        - sqlFile:
+            path: 028_app_user.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/028_app_user.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: d8e9f0a1-b2c3-4567-defa-000000000028
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for screen table
+      changes:
+        - sqlFile:
+            path: 029_screen.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/029_screen.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: e9f0a1b2-c3d4-5678-efab-000000000029
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for app_user_role table
+      changes:
+        - sqlFile:
+            path: 030_app_user_role.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/030_app_user_role.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: f0a1b2c3-d4e5-6789-fabc-000000000030
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for role_permission table
+      changes:
+        - sqlFile:
+            path: 031_role_permission.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/031_role_permission.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: a1b2c3d4-e5f6-7890-abcd-000000000031
+      author: daniel2004-lsd
+      labels: "ddl,constraints,04_constraints"
+      comment: Add foreign key constraints for module_screen table
+      changes:
+        - sqlFile:
+            path: 032_module_screen.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_constraints/032_module_screen.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false

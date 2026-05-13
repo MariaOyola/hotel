@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: e11ba212-2971-4cc6-8c52-533311d280d6
+      author: daniel2004-lsd
+      labels: "dcl,roles,postgresql,hotel-system"
+      comment: Creates database permission roles and login users for the hotel system.
+      changes:
+        - sqlFile:
+            path: 001-create-role-instructor.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/03_dcl/00_roles/001-create-role-instructor-rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false

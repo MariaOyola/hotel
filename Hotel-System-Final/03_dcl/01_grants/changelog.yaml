@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: dbebdb88-ee6b-415a-a7d1-4d37132a7183
+      author: daniel2004-lsd
+      labels: "dcl,grants,postgresql,hotel-system"
+      comment: Grants schema, table, sequence, function, and database permissions to hotel system roles.
+      changes:
+        - sqlFile:
+            path: 001-grant-permissions-instructor.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/03_dcl/01_grants/001-grant-permissions-instructor-rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false

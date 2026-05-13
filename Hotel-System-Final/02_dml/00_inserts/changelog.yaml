@@ -1,0 +1,60 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2579515e-31ed-4ccb-80c1-a8eb668fb943
+      author: daniel2004-lsd
+      labels: "dml,inserts,postgresql,seed"
+      comment: Inserts sample records with UUID identifiers and eight functional modules.
+      changes:
+        - sqlFile:
+            path: 001-seed-sample-data.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/02_dml/00_inserts/001-seed-sample-data.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+  - changeSet:
+      id: 8f1c2a44-6b9e-4c91-b2c7-002dmlcanonical
+      author: daniel2004-lsd
+      labels: "dml,inserts,postgresql,canonical"
+      comment: Inserts canonical (base) data required for system operation.
+      changes:
+        - sqlFile:
+            path: 002_dml_canonical.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/02_dml/00_inserts/002_dml_canonical.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+            
+  - changeSet:
+      id: a3f1c2d4-8b7e-4f90-b1c5-2d9e6a3f8c71
+      author: daniel2004-lsd
+      labels: "dml,inserts,postgresql,volumetric"
+      comment: >
+        Inserts 20 volumetric rows per operational entity.
+        Prerequisites: 001-seed-sample-data and 002_dml_canonical must be applied first.
+        All inserts run inside a single DO $$ block to avoid temp-table lifecycle issues with Liquibase.
+      runOnChange: false
+      failOnError: true
+      changes:
+        - sqlFile:
+            path: 003-volumetric-seed.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/02_dml/00_inserts/003-volumetric-seed.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+            stripComments: false

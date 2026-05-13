@@ -1,0 +1,90 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3f5a8c2e-91d4-4b7c-a2f1-6d9e3c7a8b10
+      author: vanessaperdomo
+      labels: "ddl,procedures,postgresql,canonical"
+      comment: Creates stored procedure to insert canonical base roles.
+      changes:
+        - sqlFile:
+            path: 001_sp_insert_roles.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/08_procedures/001_sp_insert_roles.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+            stripComments: false
+
+  - changeSet:
+      id: 9b2d1f4c-6a3e-4e90-b5c2-1f8d7a3c6e45
+      author: vanessaperdomo
+      labels: "ddl,procedures,postgresql,canonical"
+      comment: Creates stored procedure to insert canonical room statuses.
+      changes:
+        - sqlFile:
+            path: 002_sp_insert_room_status.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/08_procedures/002_sp_insert_room_status.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+            stripComments: false
+
+  - changeSet:
+      id: a7c9d2e5-3b4f-4a1c-9d8e-2f6b7c8a1d23
+      author: vanessaperdomo
+      labels: "ddl,procedures,postgresql,canonical"
+      comment: Creates stored procedure to insert canonical day types.
+      changes:
+        - sqlFile:
+            path: 003_sp_insert_day_types.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/08_procedures/003_sp_insert_day_types.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+            stripComments: false
+
+  - changeSet:
+      id: 5e1a9c7d-2f8b-4d3e-a6c1-7b2d9f4a8c56
+      author: vanessaperdomo
+      labels: "ddl,procedures,postgresql,canonical"
+      comment: Creates stored procedure to insert canonical payment methods.
+      changes:
+        - sqlFile:
+            path: 004_sp_insert_payment_methods.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/08_procedures/004_sp_insert_payment_methods.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+            stripComments: false
+
+  - changeSet:
+      id:  d4a7b2c9-8e1f-4a3d-9c6b-5f2e7a1d3c88
+      author: vanessaperdomo
+      labels: "ddl,procedures,postgresql,canonical"
+      comment: Creates stored procedure to insert the initial admin user.
+      changes:
+        - sqlFile:
+            path: 005_sp_insert_admin_user.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/08_procedures/005_sp_insert_admin_user.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+            stripComments: false
